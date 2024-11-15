@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance and Azimuth Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-4">
+        <h1 class="text-center">Distance and Azimuth Calculator</h1>
+        <div class="row my-4">
+            <div class="col-md-6">
+                <label for="lat1" class="form-label">Latitude Point 1</label>
+                <input type="number" id="lat1" class="form-control" placeholder="Enter Latitude of Point 1" value ="48.43296312990849">
+                <label for="lon1" class="form-label mt-3">Longitude Point 1</label>
+                <input type="number" id="lon1" class="form-control" placeholder="Enter Longitude of Point 1" value = "-123.49219465917746">
+            </div>
+            <div class="col-md-6">
+                <label for="lat2" class="form-label">Latitude Point 2</label>
+                <input type="number" id="lat2" class="form-control" placeholder="Enter Latitude of Point 2" value ="48.44168615009408">
+                <label for="lon2" class="form-label mt-3">Longitude Point 2</label>
+                <input type="number" id="lon2" class="form-control" placeholder="Enter Longitude of Point 2" value ="-123.46907498631838">
+            </div>
+        </div>
+        <div class="text-center my-4">
+            <button id="calculate" class="btn btn-primary">Calculate</button>
+        </div>
+        <div id="output" class="my-4">
+            <h5>Results:</h5>
+            <p><strong>Distance:</strong> <span id="distance"></span></p>
+            <p><strong>Azimuth:</strong> <span id="azimuth"></span></p>
+        </div>
+        <div id="map" class="my-4"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
